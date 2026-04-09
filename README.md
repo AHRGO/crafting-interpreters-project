@@ -1,2 +1,3 @@
 # crafting-interpreters-project
-This is a project I made while studying the Crafting Interpreters book, by Robert Nystrom
+This is a project I made while studying the [Crafting Interpreters](https://craftinginterpreters.com/) book, by Robert Nystrom
+
