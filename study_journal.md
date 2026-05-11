@@ -1,7 +1,7 @@
 # Study Journal
 Here I will write down what I've learned and what I think about many subjects as I'm reading this book and developing the project. I will split the notes by chapters, as I think it's a good form of organization.
 
-## Introduction
+# Introduction
 As soon as I don't have much experience with C++, and I woul'd like to leant it, I will try to implement this project side-by-side with it's Java version, as Java is the language chosen by the author
 
 Well, I just discovered that there are many other options of languages that the readers themselves ported. Cool. It's possible to find this ports [here](https://github.com/munificent/craftinginterpreters/wiki/Lox-implementations)
@@ -13,11 +13,12 @@ Uuuh, it seems we will write all the same, but in C. I like C :D
 
 Well, maybe I will use this opportunity to write it in C++ too.
 
-### Challenges
+## Challenges
 Nice, there's challenges since the introduction of the book, good, good.
 
-Well, first one:
+Well, let's do it.
 
+### First one:
 > "There are at least six domain-specific languages used in the [little system I cobbled together](https://github.com/munificent/craftinginterpreters) to write and publish this book. What are they?"
 
 looking for the little languages...
@@ -28,3 +29,12 @@ Well, maybe I can say that, as since there is one extension (eg '.exe') there's 
 By now, let's stick to what I know that creates languages.
 
 1. `Markdown` - since markdown is in all readme's. In fact, is the little language, or, **domain-specific language**, I'm using right now as I take down my notes.
+2. `Makefile` - The Makefile is written in its own specific language, as far as I know, so, I think that counts.
+3. `.gitignore` - It has a yaml-like sintax, but it doesn't seem yaml at all, so, I bet that this is a domain-specific language too
+4. `.h files` - In the sorce repository, there is a folder named "c", wich has a lot of .c and .h files. Since .h files are headers for c programs, I think that this can be called "domain-specific"
+5. `yaml` - There are yaml files, in the "tool" folder. Yaml files are designed for... uh, I don't know entirely. *Should see this later*.
+6. `lock` - .lock files are used to... well, I don't understand them entirely too, but they "fix" a version in order for the pubspec.yaml knows what version it should seek when running `flutter pub get` or a similar command.
+
+Well, that's it. Later I should seek the right answers to understand more about this.
+
+
