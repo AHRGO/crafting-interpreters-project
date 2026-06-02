@@ -54,5 +54,118 @@ This was not... hard, but kinda challenging and I found it pretty fun!
 
 It was long ago since I coded in C so was fun to remember and to implement the linked list.
 
-What can I say? I just love it!
+code for this challenge can be found in `/challenges/01/c`
 
+### What I've learnt
+
+From the third challenge, specially the linked list challenge, I could remember some things and learn other new exciting ones!
+
+#### Memory Leaks
+The challenge does not include to check for memory leaks, but I want to try it anyways.
+
+I've dicovered how to check if your C code has memory leaks. Turns out that my actual code has mem leaks but, as I'm just returning, I will let them there until I get a way to solve them.
+
+There's two tools that I discovered for that: [**Valgrind**](https://valgrind.org/) and [**Address Sanitizer**](https://clang.llvm.org/docs/AddressSanitizer.html).
+
+The code for executing these tools is:
+For **Valgrind**:
+
+```bash
+    $ valgrind --leak-check=full ./program
+```
+
+For **Address Sanitizer**:
+```bash
+    $ gcc -fsanitize=address -g program.c -o program
+```
+
+#### Functions "abstract" declarations
+In C, you can define the functions declarations in top of the file, and then write the implementation bellow those declarations. 
+
+Since C reads the code from top to bottom, this is helpful to avoid the loophole where, in a writed-above function (let's call it **func A**), you call a bellow-writed function (**func B**) and the compiler complains that the **func B**, called in **func A** does not exist.
+
+These seem to me pretty close of the abstract declarations in Java. But I'm not sure. I can look over it later to find out.
+
+#### Code organization
+It's impressive how fast the code can get messy. Like, I'm just experementing and write a lot of functions to understand the different ways I can do one output, save duplicate code and another little things, and, at the moment of this writing, I have 15 different functions, and some of their implementation are... well, large.
+
+Maybe this is wny thinks like KISS (Keep It Simple Stupid) were created in first place. When doing a lot of things, you can get a messy codebase that is a terror to navigate throught.
+
+Well, after everything is working fine I will delete the experimenting functions I've created and this will be more readable, hopely.
+
+> Note: update this section as soon I've deleted the experimenting functions
+
+#### While loop VS Recursive function
+I was writing a function and then the question arose in my mind: 
+> What is more optimized? Executing a while loop or making the function recursive?
+
+So, I asked AI the question, using the following prompt:
+```
+what is more performatic in C? Excuting a do while or using recursion? Let's say that both cases execute the same n times.
+
+What is and why?
+```
+
+I asked both Chat GPT and Gemini, and the answer I've found is very cool. 
+
+See, the `do while` loop is better, but the "why" resides on assembly level. 
+
+When using iteration, for each iteration, the CPU must create a new stack frame in memory, pushing a lot of info (like function parameters and return address) onto the call stack.
+
+But when you just iterate using a while loop, all the proccess is made on the same stack frame, so, is slightly better.
+
+Exciting, isn't it?
+
+#### Bad idea when returning strings.
+At this point, I've created the following function:
+```c
+char *request_user_input() {
+    char text_buffer[100];
+
+    printf("Enter node text value: \n");
+    fgets(text_buffer, sizeof(text_buffer), stdin);
+
+    text_buffer[strcspn(text_buffer, "\n")] = 0;
+
+    return text_buffer;
+}
+```
+
+Well, I just discovered that this is a really bad ideia, since `text_buffer` is a local variable inside the scope of the function. So, when the function exits, that memory is gone (I don't get it yet if the memory is deallocated or just the value inside it is overwriten by some other random value), thus creating a [**Dangling Pointer**](https://medium.com/@sofiasondh/what-is-a-dangling-pointer-how-can-it-be-avoided-e72321e1fdf3).
+
+Okay, we have a problem. What now?
+
+It seems there's two approaches to this problem:
+1. `Letting the caller providing the buffer`, by doing something like this:
+
+    ```c
+    void request_user_input(char *text_buffer, size_t buffer_size) {
+        // char text_buffer[100];
+
+        printf("Enter node text value: \n");
+        fgets(text_buffer, buffer_size, stdin);
+
+        text_buffer[strcspn(text_buffer, "\n")] = '\0';
+
+        // return text_buffer;
+    }
+
+    int main() {
+        char text_buffer[100];
+
+        request_user_input(text_buffer, sizeof(text_buffer));
+
+        printf("text in buffer: %s\n", text_buffer);
+
+        return 0;
+    }
+
+    ```
+
+**OR**
+
+2. `Allocating memory dynamically`.
+
+    This will use malloc (duh) and the memory will need to be freed thereafter.
+
+    Since C is already complicated and such an error-prone language, the first approach seems the safier one.
