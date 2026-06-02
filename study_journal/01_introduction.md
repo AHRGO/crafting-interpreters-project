@@ -1,6 +1,3 @@
-# Study Journal
-Here I will write down what I've learned and what I think about many subjects as I'm reading this book and developing the project. I will split the notes by chapters, as I think it's a good form of organization.
-
 # Introduction
 As soon as I don't have much experience with C++, and I woul'd like to leant it, I will try to implement this project side-by-side with it's Java version, as Java is the language chosen by the author
 
@@ -18,7 +15,7 @@ Nice, there's challenges since the introduction of the book, good, good.
 
 Well, let's do it.
 
-### First one:
+### 1st:
 > "There are at least six domain-specific languages used in the [little system I cobbled together](https://github.com/munificent/craftinginterpreters) to write and publish this book. What are they?"
 
 looking for the little languages...
@@ -37,4 +34,25 @@ By now, let's stick to what I know that creates languages.
 
 Well, that's it. Later I should seek the right answers to understand more about this.
 
+### 2nd
+Building a hello world in Java. Pretty simple.
+
+Can be found in `/challenges/01/java`
+
+### 3rd
+3.1 Building a hello world in C. This was pretty simple also. 
+
+The next step of the challenge was to define a doubly linked list, to get some practice with pointers.
+
+The code should implement:
+- an insert function
+- a find function
+- a delete function
+- test them
+
+This was not... hard, but kinda challenging and I found it pretty fun!
+
+It was long ago since I coded in C so was fun to remember and to implement the linked list.
+
+What can I say? I just love it!
 
