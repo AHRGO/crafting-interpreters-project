@@ -6,7 +6,7 @@ Here, I wrote not only the code provided by the book, but also the notes/insight
 As a significant part of the interpreter is made in C, it was also a perfect opportunity to strengthen my knowledge in this fascinating language.
 
 # A bit of context
-While in my college course of System Analysis and Development, I had few opportunities to study and learn more about C programming, code optimization and low level development, since it is focused in professional development and the preparation for the job market.
+While in the college course of System Analysis and Development, I had few opportunities to work and learn more about C programming, code optimization and low level development, since it is a course focused in professional development and the preparation for the job market.
 
 But, somehow, the few classes I had in these subjects sparked me a fierceful curiosity, that droves me more and more towards this "deep dark side" of technology. 
 
@@ -27,7 +27,7 @@ Realizing that I often do this, seek answers to questions no one seems to care a
 
 And it turned out to be a pretty fun experience!
 
-Well, I decided to go on with it.
+So I decided to keep doing it.
 
 # The Study Journal
 Since this is a **learning journal**, you may notice some coding errors or misunderstood concepts here and there. 
@@ -38,7 +38,9 @@ Yet, if you notice anything too grievous to be ignored, you can contact me by em
 
 I'll be pleased by the opportunity to learn how to improve these notes.
 
-But hey, don't get it too serious. Sometimes I will write a totally awful code just to see what happens.
+But hey, don't get it too serious. 
+
+Sometimes I will write a totally awful code just to see what happens.
 It's fun to try out new things, and since this isn't production code, I can be a little more adventurous, I guess.
 
 # Contents

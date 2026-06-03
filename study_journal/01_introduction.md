@@ -166,4 +166,4 @@ It seems there's two approaches to this problem:
 
     This will use malloc (duh) and the memory will need to be freed thereafter.
 
-    Since C is already complicated and such an error-prone language, the first approach seems the safier one.
+Since C is already complicated and such an error-prone language, the first approach seems the safier one.
