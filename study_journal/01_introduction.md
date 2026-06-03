@@ -1,4 +1,4 @@
-# Introduction
+# Notes on Reading
 As soon as I don't have much experience with C++, and I woul'd like to leant it, I will try to implement this project side-by-side with it's Java version, as Java is the language chosen by the author
 
 Well, I just discovered that there are many other options of languages that the readers themselves ported. Cool. It's possible to find this ports [here](https://github.com/munificent/craftinginterpreters/wiki/Lox-implementations)
@@ -10,7 +10,7 @@ Uuuh, it seems we will write all the same, but in C. I like C :D
 
 Well, maybe I will use this opportunity to write it in C++ too.
 
-## Challenges
+# Notes on Challenges
 Nice, there's challenges since the introduction of the book, good, good.
 
 Well, let's do it.
