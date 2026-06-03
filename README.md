@@ -3,7 +3,7 @@ I made this project while studying the [Crafting Interpreters](https://craftingi
 
 Here, I wrote not only the code provided by the book, but also the notes/insights I had while developing the interpreter, solving the book's challenges and, in the meantime, exploring the uncharted lands my curiosity drove me to.
 
-Since a significant part of the interpreter is made in C, it was also a perfect opportunity to strengthen my knowledge in this fascinating language.
+As a significant part of the interpreter is made in C, it was also a perfect opportunity to strengthen my knowledge in this fascinating language.
 
 # A bit of context
 While in my college course of System Analysis and Development, I had few opportunities to study and learn more about C programming, code optimization and low level development, since it is focused in professional development and the preparation for the job market.
@@ -25,7 +25,9 @@ And then I started to write them down.
 
 Realizing that I often do this, seek answers to questions no one seems to care about, I decided to make a fully account of what I was learning "behind the curtains".
 
-And it turned out to be a pretty fun experience! So, I decided to continue.
+And it turned out to be a pretty fun experience!
+
+Well, I decided to go on with it.
 
 # The Study Journal
 Since this is a **learning journal**, you may notice some coding errors or misunderstood concepts here and there. 
